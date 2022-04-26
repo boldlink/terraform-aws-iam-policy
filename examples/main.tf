@@ -5,14 +5,13 @@ provider "aws" {
 locals {
   name                   = "boldlink-test-user"
   environment            = "development"
-  policy_name            = "development-policy-${uuid()}"
-  iam_user_name          = "test-user-${uuid()}"
+  policy_name            = "development-policy"
+  iam_user_name          = "test-user"
   policy_attachment_name = "boldlink-test-policy-attach"
 }
 
 module "iam_user" {
   source        = "boldlink/iam-user/aws"
-  version       = "1.0.0"
   iam_user_name = local.iam_user_name
   name          = local.name
   force_destroy = true

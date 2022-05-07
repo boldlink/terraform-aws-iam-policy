@@ -1,3 +1,6 @@
+
+[![Build Status](https://github.com/boldlink/terraform-aws-iam-policy/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/boldlink/terraform-aws-iam-policy/actions)
+
 # AWS IAM Policy Terraform module
 
 ## Description

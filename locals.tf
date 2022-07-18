@@ -1,3 +1,3 @@
 locals {
-  create_policy_attachment = (var.users != null || var.roles != null || var.groups != null) ? true : false
+  create_policy_attachment = (length(var.users) > 0 || length(var.roles) > 0 || length(var.groups) > 0) ? true : false
 }

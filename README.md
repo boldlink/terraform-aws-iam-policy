@@ -72,15 +72,15 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_description"></a> [description](#input\_description) | (Optional, Forces new resource) Description of the IAM policy. | `string` | `null` | no |
-| <a name="input_groups"></a> [groups](#input\_groups) | (Optional) - The group(s) the policy should be applied to | `list(string)` | `null` | no |
+| <a name="input_groups"></a> [groups](#input\_groups) | (Optional) - The group(s) the policy should be applied to | `list(string)` | `[]` | no |
 | <a name="input_name_prefix"></a> [name\_prefix](#input\_name\_prefix) | (Optional, Forces new resource) Creates a unique name beginning with the specified prefix. Conflicts with `name`. | `string` | `null` | no |
 | <a name="input_path"></a> [path](#input\_path) | (Optional, default `/`) Path in which to create the policy. | `string` | `null` | no |
 | <a name="input_policy"></a> [policy](#input\_policy) | (Required) The policy document. This is a JSON formatted string. | `string` | n/a | yes |
 | <a name="input_policy_attachment_name"></a> [policy\_attachment\_name](#input\_policy\_attachment\_name) | (Optional) - The name of the attachment. Required when users, roles or groups are provided. | `string` | `null` | no |
 | <a name="input_policy_name"></a> [policy\_name](#input\_policy\_name) | (Optional, Forces new resource) The name of the policy. If omitted, Terraform will assign a random, unique name. | `string` | `null` | no |
-| <a name="input_roles"></a> [roles](#input\_roles) | (Optional) - The role(s) the policy should be applied to | `list(string)` | `null` | no |
+| <a name="input_roles"></a> [roles](#input\_roles) | (Optional) - The role(s) the policy should be applied to | `list(string)` | `[]` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | (Optional) Map of resource tags for the IAM Policy. | `map(string)` | `{}` | no |
-| <a name="input_users"></a> [users](#input\_users) | (Optional) - The user(s) the policy should be applied to | `list(string)` | `null` | no |
+| <a name="input_users"></a> [users](#input\_users) | (Optional) - The user(s) the policy should be applied to | `list(string)` | `[]` | no |
 
 ## Outputs
 

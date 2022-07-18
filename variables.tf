@@ -36,19 +36,19 @@ variable "policy_attachment_name" {
 variable "users" {
   type        = list(string)
   description = "(Optional) - The user(s) the policy should be applied to"
-  default     = null
+  default     = []
 }
 
 variable "roles" {
   type        = list(string)
   description = "(Optional) - The role(s) the policy should be applied to"
-  default     = null
+  default     = []
 }
 
 variable "groups" {
   type        = list(string)
   description = "(Optional) - The group(s) the policy should be applied to"
-  default     = null
+  default     = []
 }
 
 #tags

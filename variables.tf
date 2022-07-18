@@ -29,7 +29,8 @@ variable "policy" {
 
 variable "policy_attachment_name" {
   type        = string
-  description = "(Required) - The name of the attachment. This cannot be an empty string."
+  description = "(Optional) - The name of the attachment. Required when users, roles or groups are provided."
+  default     = null
 }
 
 variable "users" {
@@ -50,12 +51,9 @@ variable "groups" {
   default     = []
 }
 
-/*
-tags
-*/
-
-variable "environment" {
-  type        = string
-  description = "The environment where this resource is created"
-  default     = null
+#tags
+variable "tags" {
+  type        = map(string)
+  description = "(Optional) Map of resource tags for the IAM Policy."
+  default     = {}
 }

@@ -39,6 +39,6 @@ output "policy_tags_all" {
 }
 
 output "policy_attachment_name" {
-  value       = aws_iam_policy_attachment.main.name
+  value       = aws_iam_policy_attachment.main.*.name
   description = "The name of the attachment."
 }

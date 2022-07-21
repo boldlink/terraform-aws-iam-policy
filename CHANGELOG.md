@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 - ...
 
+## [1.0.3] - 2022-07-21
+### Changes
+- feat: Added an option to add external policy arn for `aws_iam_policy_attachment` resource
+
 ## [1.0.2] - 2022-07-15
 ### Description
 - fix: Create policy attachment only when users/groups/roles are provided
@@ -31,8 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 [Unreleased]: https://github.com/boldlink/terraform-aws-iam-policy/compare/1.0.1...HEAD
 
+[1.0.3]: https://github.com/boldlink/terraform-aws-iam-policy/releases/tag/1.0.3
 [1.0.2]: https://github.com/boldlink/terraform-aws-iam-policy/releases/tag/1.0.2
-
 [1.0.1]: https://github.com/boldlink/terraform-aws-iam-policy/releases/tag/1.0.1
-
 [1.0.0]: https://github.com/boldlink/terraform-aws-iam-policy/releases/tag/1.0.0

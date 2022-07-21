@@ -16,5 +16,5 @@ resource "aws_iam_policy_attachment" "main" {
   users      = var.users
   roles      = var.roles
   groups     = var.groups
-  policy_arn = aws_iam_policy.main.arn
+  policy_arn = var.policy_arn != null ? var.policy_arn : aws_iam_policy.main.arn
 }

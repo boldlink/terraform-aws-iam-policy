@@ -22,6 +22,12 @@ variable "path" {
   default     = null
 }
 
+variable "policy_arn" {
+  type        = string
+  description = "(Optional) ARN of an external policy not created by this module"
+  default     = null
+}
+
 variable "policy" {
   type        = string
   description = "(Required) The policy document. This is a JSON formatted string."

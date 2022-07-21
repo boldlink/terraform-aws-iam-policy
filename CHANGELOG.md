@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added: `.github/workflow` folder
 - Added: `.gitignore` file
 - added:  Complete and minimum examples
+- feat: Added an option to add external policy arn for `aws_iam_policy_attachment` resource
 
 ## [1.0.1] - 2022-04-28
 ### Description

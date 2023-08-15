@@ -1,4 +1,5 @@
 module "iam_user" {
+  #checkov:skip=CKV_TF_1:Ensure Terraform module sources use a commit hash
   source        = "boldlink/iam-user/aws"
   name          = local.name
   force_destroy = true

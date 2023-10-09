@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 - CKV_TF_1 Ensure Terraform module sources use a commit hash
 
+## [1.1.0] - 2023-10-09
+### Description
+- feat: Showcased policy attachment to iam group and iam role
+
 ## [1.0.2] - 2022-07-15
 ### Description
 - fix: Create policy attachment only when users/groups/roles are provided
@@ -28,8 +32,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Feature: IAM policy
 - Feature: Policy attachment
 
-[Unreleased]: https://github.com/boldlink/terraform-aws-iam-policy/compare/1.0.1...HEAD
+[Unreleased]: https://github.com/boldlink/terraform-aws-iam-policy/compare/1.1.0...HEAD
 
+[1.1.0]: https://github.com/boldlink/terraform-aws-iam-policy/releases/tag/1.1.0
+[1.0.2]: https://github.com/boldlink/terraform-aws-iam-policy/releases/tag/1.0.2
 [1.0.2]: https://github.com/boldlink/terraform-aws-iam-policy/releases/tag/1.0.2
 
 [1.0.1]: https://github.com/boldlink/terraform-aws-iam-policy/releases/tag/1.0.1

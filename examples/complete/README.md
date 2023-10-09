@@ -31,6 +31,8 @@ No providers.
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_complete_policy"></a> [complete\_policy](#module\_complete\_policy) | ./../../ | n/a |
+| <a name="module_iam_group"></a> [iam\_group](#module\_iam\_group) | boldlink/iam-group/aws | 1.0.5 |
+| <a name="module_iam_role"></a> [iam\_role](#module\_iam\_role) | boldlink/iam-role/aws | 1.1.1 |
 | <a name="module_iam_user"></a> [iam\_user](#module\_iam\_user) | boldlink/iam-user/aws | n/a |
 
 ## Resources
@@ -39,7 +41,9 @@ No resources.
 
 ## Inputs
 
-No inputs.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_tags"></a> [tags](#input\_tags) | Tags to apply to the resources | `map(string)` | <pre>{<br>  "Department": "DevOps",<br>  "Environment": "example",<br>  "InstanceScheduler": true,<br>  "LayerId": "cExample",<br>  "LayerName": "cExample",<br>  "Owner": "Boldlink",<br>  "Project": "Examples",<br>  "user::CostCenter": "terraform"<br>}</pre> | no |
 
 ## Outputs
 
@@ -61,4 +65,4 @@ This repository uses third party software:
   * Install with `brew install tflint`
   * Manually use via pre-commit
 
-#### BOLDLink-SIG 2022
+#### BOLDLink-SIG 2023

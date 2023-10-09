@@ -17,14 +17,18 @@
 
 This module creates IAM policies and policy attachment resources.
 
-Examples available [`here`](github.com/boldlink/terraform-aws-iam-policy/tree/main/examples)
+## Advantage of Using this Module
+- **Unified Management:** Efficiently manage IAM policies and their attachments within a single module.
+
+Examples available [`here`](./examples)
 
 ## Usage
 *NOTE*: These examples use the latest version of this module
 
-```console
+```hcl
 module "minimum" {
-  source      = "./../../"
+  source      = "boldlink/iam-policy/aws"
+  version     = "<provide_latest_version_here>"
   policy_name = "minimum-policy-example"
   description = "IAM policy to grant EC2 describe permissions"
   policy = jsonencode({
@@ -63,7 +67,7 @@ module "minimum" {
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.12.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.20.0 |
 
 ## Modules
 
@@ -121,9 +125,21 @@ This repository uses third party software:
 
 ### Makefile
 The makefile contained in this repo is optimized for linux paths and the main purpose is to execute testing for now.
-* Create all tests:
-`$ make tests`
-* Clean all tests:
-`$ make clean`
+* Create all tests stacks including any supporting resources:
+```console
+make tests
+```
+* Clean all tests *except* existing supporting resources:
+```console
+make clean
+```
+* Clean supporting resources - this is done separately so you can test your module build/modify/destroy independently.
+```console
+make cleansupporting
+```
+* !!!DANGER!!! Clean the state files from examples and test/supportingResources - use with CAUTION!!!
+```console
+make cleanstatefiles
+```
 
-#### BOLDLink-SIG 2022
+#### BOLDLink-SIG 2023

@@ -24,7 +24,9 @@
 
 ## Providers
 
-No providers.
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.20.0 |
 
 ## Modules
 
@@ -32,12 +34,13 @@ No providers.
 |------|--------|---------|
 | <a name="module_complete_policy"></a> [complete\_policy](#module\_complete\_policy) | ./../../ | n/a |
 | <a name="module_iam_group"></a> [iam\_group](#module\_iam\_group) | boldlink/iam-group/aws | 1.0.5 |
-| <a name="module_iam_role"></a> [iam\_role](#module\_iam\_role) | boldlink/iam-role/aws | 1.1.1 |
 | <a name="module_iam_user"></a> [iam\_user](#module\_iam\_user) | boldlink/iam-user/aws | n/a |
 
 ## Resources
 
-No resources.
+| Name | Type |
+|------|------|
+| [aws_iam_role.example_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
 
 ## Inputs
 

@@ -18,15 +18,12 @@ module "iam_group" {
   })
 }
 
-module "iam_role" {
-  source  = "boldlink/iam-role/aws"
-  version = "1.1.1"
-  name    = "${local.name}-role"
+resource "aws_iam_role" "example_role" {
+  name = "${local.name}-role"
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
       {
-        Sid    = "ExampleSTSAssumeRole"
         Action = "sts:AssumeRole"
         Effect = "Allow"
         Sid    = ""
@@ -36,6 +33,8 @@ module "iam_role" {
       },
     ]
   })
+
+  tags = var.tags
 }
 
 module "iam_user" {
@@ -51,7 +50,7 @@ module "complete_policy" {
   policy_name            = local.policy_name
   policy_attachment_name = "${local.policy_name}-attachment"
   users                  = [module.iam_user.user_name]
-  roles                  = [module.iam_role.name]
+  roles                  = [aws_iam_role.example_role.name]
   groups                 = [module.iam_group.iam_group_name]
   description            = "IAM user policy to deny EC2 creation and deletion of tags"
   policy                 = local.policy

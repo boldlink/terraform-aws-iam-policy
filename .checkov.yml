@@ -1,0 +1,8 @@
+directory:
+- .
+download-external-modules: false
+evaluate-variables: true
+external-modules-download-path: .external_modules
+framework: all
+skip-check:
+- CKV_TF_1 #Ensure Terraform module sources use a commit hash

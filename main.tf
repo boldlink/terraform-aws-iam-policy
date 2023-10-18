@@ -5,7 +5,7 @@ resource "aws_iam_policy" "main" {
   description = var.description
   policy      = var.policy
   tags = merge({
-    name = var.policy_name
+    Name = var.policy_name
     },
   var.tags)
 }
